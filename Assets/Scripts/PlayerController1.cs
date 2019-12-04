@@ -18,7 +18,7 @@ public class PlayerController1 : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (transform.position.x < -b) 
+        if (transform.position.x < -b)
         {
             transform.position = new Vector3(b, transform.position.y, transform.position.z);
         }
@@ -31,6 +31,10 @@ public class PlayerController1 : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Space))
         {
             Instantiate(projectilePrefap, transform.position, projectilePrefap.transform.rotation);
+        } else if (Input.GetKeyUp(KeyCode.Space))
+        {
+            Instantiate(projectilePrefap, transform.position, projectilePrefap.transform.rotation);
         }
+
     }
 }
