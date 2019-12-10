@@ -210,12 +210,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 36b71453c7303604d868efb22a6cd832, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  S: 0.001
+  F: 0.001
   animalPrefabs:
   - {fileID: 5424930466431590149, guid: 0b5036eff8dbc1b48b0b451b680db78a, type: 3}
   - {fileID: 4957653537200947115, guid: 81e71ac179dbef041851e898c5afc34f, type: 3}
   - {fileID: 1433323268848631016, guid: c799ac3964a684c4aaba079c5847e168, type: 3}
   - {fileID: 3280190321767038324, guid: d16dc0e361f27134ebd1947bcd32a525, type: 3}
   - {fileID: 8551570816236518870, guid: 9e2aed5949d24c2498a707dc67b21231, type: 3}
+  startDelay: 0.01
+  spawnInterval: 1.5
 --- !u!4 &366065652
 Transform:
   m_ObjectHideFlags: 0
@@ -402,8 +406,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 11d492db99924a749b61e07709ee36ce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  S: 10
+  F: 0.001
   horizontalInput: 0
-  speed: 100
+  speed: 210
   b: 20
   projectilePrefap: {fileID: 8675499601354793634, guid: 2d12835cb5c1b6c4eaa9b48dacbfbd54,
     type: 3}
@@ -459,7 +465,7 @@ Camera:
   far clip plane: 1000
   field of view: 45
   orthographic: 0
-  orthographic size: 10
+  orthographic size: 10.473768
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -483,7 +489,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 534669902}
   m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: -2.12, y: 70.8, z: 10.3}
+  m_LocalPosition: {x: -2.12, y: 52.7, z: 7.4}
   m_LocalScale: {x: 1, y: 20, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -1066,6 +1072,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8675499601970199540, guid: 2d12835cb5c1b6c4eaa9b48dacbfbd54,
+        type: 3}
+      propertyPath: speed
+      value: 60
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2d12835cb5c1b6c4eaa9b48dacbfbd54, type: 3}

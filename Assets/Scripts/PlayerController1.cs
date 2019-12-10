@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class PlayerController1 : MonoBehaviour
 {
-
+    public float S = 1;
+    public float F = 1;
     public float horizontalInput;
     public float speed = 100;
     public float b = 20;
@@ -12,7 +13,7 @@ public class PlayerController1 : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
@@ -28,13 +29,17 @@ public class PlayerController1 : MonoBehaviour
         }
         horizontalInput = Input.GetAxis("Horizontal");
         transform.Translate(Vector3.right * horizontalInput * Time.deltaTime * speed);
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKeyDown(KeyCode.P))
         {
-            Instantiate(projectilePrefap, transform.position, projectilePrefap.transform.rotation);
-        } else if (Input.GetKeyUp(KeyCode.Space))
+            InvokeRepeating("ShootFood", S, F );
+        } else if (Input.GetKeyDown(KeyCode.I ))
         {
-            Instantiate(projectilePrefap, transform.position, projectilePrefap.transform.rotation);
+            CancelInvoke("ShootFood");
         }
 
+    }
+    void ShootFood()
+    {  
+     Instantiate(projectilePrefap, transform.position, projectilePrefap.transform.rotation);
     }
 }
